@@ -1,0 +1,11 @@
+torch
+torchvision
+opencv-python
+numpy
+pillow
+scikit-image
+matplotlib
+gradio
+tqdm
+torchinfo
+datasets
