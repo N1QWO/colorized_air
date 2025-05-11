@@ -54,7 +54,6 @@ def visualize_prediction(model, image_path, device):
         plt.tight_layout()
         plt.show()
 
-
 if __name__ =='__main__':
     # Сначала создаём модель (замените MyModel() на реальную архитектуру)
     from model import ColorizationModel  # например

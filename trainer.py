@@ -1,7 +1,7 @@
 import torch
 import torch.optim as optim
 from tqdm import tqdm
-from utils import save_model, load_model
+from utils import visualize_prediction
 from PIL import Image
 from skimage import color
 from torchvision import transforms
@@ -30,7 +30,7 @@ class Trainer:
                 total_loss += loss.item()
                 progress_bar.set_postfix(loss=loss.item())
             print(f"Epoch [{epoch+1}/{epochs}], Loss: {total_loss/len(train_loader):.4f}")
-        save_model(self.model, "models/colorization_model.pth")
+        torch.save(self.model.state_dict(), "models/colorization_model.pth")
 
     def predict(self, image_path):
         self.model.eval()
